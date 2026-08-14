@@ -3,6 +3,12 @@
 
 # Summary: How the OWASP Top Ten 2025 Categories Are Structured (Expanded Explanation)
 
+## Data Collection Changes
+- For this edition, OWASP collected data without restricting which CWEs (Common Weakness Enumerations) could be reported — unlike the 2021 edition, which had CWE restrictions.
+- Contributors were asked for two numbers per year (starting 2021): the total applications tested, and the number of applications with at least one instance of a given CWE.
+- This method tracks prevalence (how many apps are affected) rather than frequency (how many times a flaw appears in one app).
+- A CWE showing up 4 times or 4,000 times in one app counts the same — because manual testers typically log a vulnerability once, while automated tools log every instance, which would distort results if frequency mattered.
+
 ## First, what is a CWE?
 **CWE stands for "Common Weakness Enumeration."** Think of it as a giant, standardized catalog maintained by MITRE (a research organization) that gives a unique ID number and name to every *specific type* of software flaw that can lead to a security vulnerability. For example:
 - CWE-79 = Cross-Site Scripting
@@ -46,6 +52,7 @@ Take "Injection" as an example again: there isn't just one CWE for it. There's a
 CWEs can describe either:
 - Root causes (the underlying flaw) — e.g., "Cryptographic Failure," "Misconfiguration"
 - Symptoms (the resulting effect) — e.g., "Sensitive Data Exposure," "Denial of Service"
+  
 The 2025 edition prioritizes root causes where possible, since they're more actionable for identifying and fixing issues.
 This isn't entirely new — past Top Ten lists mixed both types, and CWE itself mixes both — but this edition is more intentional about favoring root causes.
 
